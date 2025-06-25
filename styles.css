@@ -1,1 +1,28 @@
 /*  your css code here. If applicable */
+.container{
+	position:relative;
+	display:inline-flex;
+	gap:5px;
+	border: 1px solid black;
+	margin-bottom:10px;
+}
+
+.container div{
+	width:30px;
+	height:30px;
+	/* background-color:green; */
+	border-radius:50%;
+	border: 2px solid green;
+}
+
+.progress{
+	position:absolute;
+	height:5px;
+	width:10%;
+	background-color:blue;
+}
+
+.active{
+	background-color:yellow;
+	border:1px solid yellowgreen
+}
