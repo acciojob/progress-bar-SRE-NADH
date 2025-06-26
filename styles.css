@@ -2,27 +2,32 @@
 .container{
 	position:relative;
 	display:inline-flex;
-	gap:5px;
 	border: 1px solid black;
 	margin-bottom:10px;
 }
 
-.container div{
+.circle{
 	width:30px;
 	height:30px;
 	/* background-color:green; */
 	border-radius:50%;
 	border: 2px solid green;
 }
-
+.progress{
+	width:20px;
+	height:3px;
+}
+/* 
 .progress{
 	position:absolute;
 	height:5px;
 	width:10%;
 	background-color:blue;
-}
+} */
 
 .active{
-	background-color:yellow;
-	border:1px solid yellowgreen
+	border:3px solid blue
+}
+.progress-active{
+	background-color:blue;
 }

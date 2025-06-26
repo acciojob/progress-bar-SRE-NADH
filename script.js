@@ -2,7 +2,7 @@
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
 const circles = document.querySelectorAll('.circle');
-const progress = document.getElementsByClassName('progress')[0];
+const progress = document.querySelectorAll('.progress');
 let currentIndex = 1;
 prevButton.addEventListener('click',(e)=>{
  if(currentIndex==1){
@@ -31,7 +31,15 @@ function updateCircle(){
     }
   });
 
-	progress.style.width = `${currentIndex*35}px`;
+	
+	progress.forEach((prog, idx) => {
+    if (idx < currentIndex) {
+      prog.classList.add('progress-active');
+    } else {
+      prog.classList.remove('progress-active');
+    }
+  });
+
 
 	nextButton.disabled = currentIndex==circles.length;
 	prevButton.disabled = currentIndex==1;
